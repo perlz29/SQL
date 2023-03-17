@@ -1,0 +1,26 @@
+--Create a clothing store data base
+
+CREATE TABLE store (id INTEGER PRIMARY KEY,item TEXT, quantity INTEGER, price INTEGER, age INTEGER);
+
+INSERT INTO store VALUES(1, 'croptops', 250, 25, 30);
+INSERT INTO store VALUES(2, 'jeans', 30, 90, 20);
+INSERT INTO store VALUES(3, 'socks', 2, 10, 44);
+INSERT INTO store VALUES(4, 'tanks', 400, 30, 100);
+INSERT INTO store VALUES(5, 'sweaters', 40, 65, 39);
+INSERT INTO store VALUES(6, 'hoodies', 180, 80, 7);
+INSERT INTO store VALUES(7, 'long sleeves', 200, 30, 1);
+INSERT INTO store VALUES(8, 'leggings', 200, 65, 5);
+INSERT INTO store VALUES(9, 'sports bras', 90, 40, 89);
+INSERT INTO store VALUES(10, 'flowy pants', 150, 75, 120);
+INSERT INTO store VALUES(11, 'glasses', 40, 25, 111);
+INSERT INTO store VALUES(12, 'scarves', 60, 40, 29);
+INSERT INTO store VALUES(13, 't-shirts', 100, 35, 27);
+INSERT INTO store VALUES (14, 'jackets', 50, 80, 10);
+INSERT INTO store VALUES(15, 'hair ties', 80, 10, 10);
+
+--Display all items that have been in stock for less than a month
+
+SELECT * FROM store WHERE age > 30 ORDER BY price;
+
+--What is the most expensive item in the store?
+SELECT MAX(price) FROM store ORDER BY item;
